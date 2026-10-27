@@ -19,7 +19,6 @@ import {
   Radio,
   MapPin,
   RefreshCw,
-  Sparkles,
   ShieldCheck,
   Zap,
 } from 'lucide-react';
@@ -359,32 +358,6 @@ export const Sidebar: React.FC = () => {
             </button>
           )}
 
-          {/* Download Source ZIP Button */}
-          {sidebarOpen ? (
-            <a
-              href="/api/download/zip"
-              download="airsense-updated-source.zip"
-              className="w-full py-2 px-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 border border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-bold flex items-center justify-between transition-all"
-              title="Download complete updated source code ZIP archive"
-            >
-              <div className="flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                <span>Export Project ZIP</span>
-              </div>
-              <span className="text-[10px] bg-emerald-200/60 dark:bg-emerald-800/60 px-1.5 py-0.5 rounded font-mono">
-                .zip
-              </span>
-            </a>
-          ) : (
-            <a
-              href="/api/download/zip"
-              download="airsense-updated-source.zip"
-              className="p-2 rounded-xl text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 flex justify-center transition-colors"
-              title="Download complete updated source code ZIP"
-            >
-              <Sparkles className="w-4 h-4" />
-            </a>
-          )}
 
           {/* Theme & Colorblind controls */}
           <div className={`flex items-center ${sidebarOpen ? 'justify-between' : 'justify-center'} gap-2`}>
